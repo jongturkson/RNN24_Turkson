@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Programming Language Color Game</title>
+</head>
+<body id="body" style="background-color: white;">
+
+    <h1>Programming Language Color Game</h1>
+
+    <!-- Initial display of all languages -->
+    <div id="all">
+        <pre>
+            Python:  <span style="font-weight: 600; color: white; background-color: blue;">blue</span><hr>
+            Javascript:  <span style="font-weight: 600; color: black; background-color: yellow;">yellow</span><hr>
+            Java:  <span style="font-weight: 600; color: white; background-color: brown;">brown</span><hr>
+            C#:  <span style="font-weight: 600; color: white; background-color: green;">green</span><hr>
+            Ruby:  <span style="font-weight: 600; color: white; background-color: red;">red</span><hr>
+            PHP:  <span style="font-weight: 600; color: white; background-color: purple;">purple</span><hr>
+            Go:  <span style="font-weight: 600; color: black; background-color: lightblue;">lightblue</span><hr>
+            Swift:  <span style="font-weight: 600; color: black; background-color: orange;">orange</span><hr>
+            TypeScript:  <span style="font-weight: 600; color: white; background-color: darkblue;">darkblue</span><hr>
+            Kotlin:  <span style="font-weight: 600; color: white; background-color: rustorange;">rustorange</span><hr>
+            Rust:  <span style="font-weight: 600; color: black; background-color: lightgray;">lightgray</span><hr>
+            HTML:  <span style="font-weight: 600; color: black; background-color: lightgreen;">lightgreen</span><hr>
+            CSS:  <span style="font-weight: 600; color: white; background-color: teal;">teal</span><hr>
+            R:  <span style="font-weight: 600; color: black; background-color: lightgray;">lightgray</span><hr>
+            Dart:  <span style="font-weight: 600; color: black; background-color: cyan;">cyan</span><hr>
+            Scala:  <span style="font-weight: 600; color: white; background-color: maroon;">maroon</span><hr>
+            Swift:  <span style="font-weight: 600; color: black; background-color: pink;">pink</span><hr>
+            Elixir:  <span style="font-weight: 600; color: white; background-color: magenta;">magenta</span><hr>
+            Haskell:  <span style="font-weight: 600; color: black; background-color: lavender;">lavender</span><hr>
+            Lua:  <span style="font-weight: 600; color: black; background-color: lime;">lime</span><hr>
+            Perl:  <span style="font-weight: 600; color: black; background-color: gold;">gold</span><hr>
+        </pre>
+    </div>
+
+    <!-- Game rules -->
+    <h4>The rules are simple: Type in the programming language and its associated color.</h4>
+
+    <!-- Input fields, initially hidden -->
+    <div id="inputs" style="display: none;">
+        <label for="lang">Programming Language:</label>
+        <input id="lang" type="text" placeholder="Enter language"><br><br>
+        <label for="col">Color:</label>
+        <input id="col" type="text" placeholder="Enter color"><br><br>
+        <button id="submit">Submit</button>
+    </div>
+
+    <!-- Result section -->
+    <h2 id="result" style="display: none;">Your result</h2>
+
+    <!-- Table to display results -->
+    <table border="1" id="results-table" style="width: 100%; border-collapse: collapse; display: none;">
+        <thead>
+            <tr><th>Results</th></tr>
+            <tr>
+                <th>Attempt Number</th>
+                <th>Programming Language</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="results-body"></tbody>
+    </table>
+
+    <script src="play.js"></script>
+</body>
+</html>
