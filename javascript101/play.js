@@ -30,7 +30,6 @@ const maxFailures = 5;
 const corr = new Audio('./correct.mp3');
 const wrong = new Audio('./wrong.mp3');
 
-// Display all programming languages for 4 seconds
 window.onload = () => {
     const displayContainer = document.getElementById('all');
     displayContainer.innerHTML = items.map(item => 
@@ -43,7 +42,6 @@ window.onload = () => {
     }, 4000);
 };
 
-// Handle submit logic
 document.getElementById('submit').addEventListener('click', () => {
     const languageInput = document.getElementById('lang').value.toLowerCase();
     const colorInput = document.getElementById('col').value.toLowerCase();
@@ -70,7 +68,6 @@ document.getElementById('submit').addEventListener('click', () => {
     }
 });
 
-// Handle success attempts
 function handleSuccessAttempt(match) {
     corr.play();
     usedLanguages.add(match.language);
@@ -80,7 +77,6 @@ function handleSuccessAttempt(match) {
     displayMessage(`Correct! "${match.language}" matches the color "${match.color}".`, 'green');
 }
 
-// Handle failed attempts
 function handleFailedAttempt() {
     wrong.play();
     failedAttempts++;
@@ -91,7 +87,6 @@ function handleFailedAttempt() {
     changeBackgroundColor('red');
 }
 
-// Change background color temporarily
 function changeBackgroundColor(color) {
     const body = document.getElementById('body');
     body.style.backgroundColor = color;
@@ -101,7 +96,6 @@ function changeBackgroundColor(color) {
     }, 1000);
 }
 
-// Update results table
 function updateResultsTable() {
     const tableBody = document.getElementById('results-body');
     tableBody.innerHTML = attempts.map((attempt, index) => `
@@ -115,14 +109,12 @@ function updateResultsTable() {
     `).join('');
 }
 
-// End the game
 function endGame() {
     document.getElementById('submit').disabled = true;
     displayMessage('Game Over! Check your results table.', 'blue');
     document.getElementById('results-table').style.display = 'table';
 }
 
-// Display messages in the HTML
 function displayMessage(message, color) {
     const messageDisplay = document.getElementById('result');
     messageDisplay.style.display = 'block';
